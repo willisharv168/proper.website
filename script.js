@@ -31,12 +31,13 @@
   if (!section || !logo) return;
 
   /* SVG aspect ratio: viewBox 1120.11 × 280.55 */
-  const LOGO_H        = 300;
   const LOGO_ASPECT   = 1120.11 / 280.55;
-  const LOGO_W        = LOGO_H * LOGO_ASPECT; // ~1198px
+  const LOGO_H        = logo.offsetHeight || 225;        // reads CSS min(225px, vw)
+  const LOGO_W        = LOGO_H * LOGO_ASPECT;
 
   const MARGIN        = 35;
-  const END_LOGO_H    = 84;                          // height in corner
+  const cornerSvg     = logoCorner && logoCorner.querySelector('svg');
+  const END_LOGO_H    = (cornerSvg && cornerSvg.offsetHeight) || 76; // reads CSS min(76px, vw)
   const END_SCALE     = END_LOGO_H / LOGO_H;
   const END_LOGO_W    = LOGO_W * END_SCALE;
   const LOGO_SCROLL = 700;   // px over which logo animation runs
@@ -888,8 +889,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 930;
-    const H   = cta.offsetHeight || 80;
+    const W   = cta.offsetWidth  || 698;
+    const H   = cta.offsetHeight || 60;
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -903,16 +904,16 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 40px "Satoshi", sans-serif';
+    ctx.font      = '700 30px "Satoshi", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 18, H / 2);
+    ctx.fillText('BOOK A CALL', 14, H / 2);
 
-    ctx.font      = '400 36px "Satoshi", sans-serif';
+    ctx.font      = '400 27px "Satoshi", sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 32, H / 2);
+    ctx.fillText('›', W - 24, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
-    ctx.lineWidth   = 2.5;
+    ctx.lineWidth   = 2;
     ctx.strokeRect(0.75, 0.75, W - 1.5, H - 1.5);
   }
 
@@ -926,8 +927,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 930;
-    const H   = cta.offsetHeight || 80;
+    const W   = cta.offsetWidth  || 698;
+    const H   = cta.offsetHeight || 60;
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -941,16 +942,16 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 40px "Satoshi", sans-serif';
+    ctx.font      = '700 30px "Satoshi", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 18, H / 2);
+    ctx.fillText('BOOK A CALL', 14, H / 2);
 
-    ctx.font      = '400 36px "Satoshi", sans-serif';
+    ctx.font      = '400 27px "Satoshi", sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 32, H / 2);
+    ctx.fillText('›', W - 24, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
-    ctx.lineWidth   = 2.5;
+    ctx.lineWidth   = 2;
     ctx.strokeRect(0.75, 0.75, W - 1.5, H - 1.5);
   }
 

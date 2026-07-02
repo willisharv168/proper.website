@@ -32,12 +32,12 @@
 
   /* SVG aspect ratio: viewBox 1120.11 × 280.55 */
   const LOGO_ASPECT   = 1120.11 / 280.55;
-  const LOGO_H        = logo.offsetHeight || 255;        // reads CSS min(255px, vw)
+  const LOGO_H        = logo.offsetHeight || 150;        // reads CSS min(150px, vw)
   const LOGO_W        = LOGO_H * LOGO_ASPECT;
 
   const MARGIN        = 35;
   const cornerSvg     = logoCorner && logoCorner.querySelector('svg');
-  const END_LOGO_H    = (cornerSvg && cornerSvg.offsetHeight) || 86; // reads CSS min(86px, vw)
+  const END_LOGO_H    = (cornerSvg && cornerSvg.offsetHeight) || 51; // reads CSS min(51px, vw)
   const END_SCALE     = END_LOGO_H / LOGO_H;
   const END_LOGO_W    = LOGO_W * END_SCALE;
   const LOGO_SCROLL = 700;   // px over which logo animation runs
@@ -889,8 +889,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 790;
-    const H   = cta.offsetHeight || 68;
+    const W   = cta.offsetWidth  || 465;
+    const H   = cta.offsetHeight || 40;
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -904,13 +904,13 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 34px "Satoshi", sans-serif';
+    ctx.font      = '700 20px "Satoshi", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 16, H / 2);
+    ctx.fillText('BOOK A CALL', 9, H / 2);
 
-    ctx.font      = '400 31px "Satoshi", sans-serif';
+    ctx.font      = '400 18px "Satoshi", sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 27, H / 2);
+    ctx.fillText('›', W - 16, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
     ctx.lineWidth   = 2;
@@ -927,8 +927,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 790;
-    const H   = cta.offsetHeight || 68;
+    const W   = cta.offsetWidth  || 465;
+    const H   = cta.offsetHeight || 40;
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -942,13 +942,13 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 34px "Satoshi", sans-serif';
+    ctx.font      = '700 20px "Satoshi", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 16, H / 2);
+    ctx.fillText('BOOK A CALL', 9, H / 2);
 
-    ctx.font      = '400 31px "Satoshi", sans-serif';
+    ctx.font      = '400 18px "Satoshi", sans-serif';
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 27, H / 2);
+    ctx.fillText('›', W - 16, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
     ctx.lineWidth   = 2;

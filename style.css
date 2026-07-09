@@ -257,9 +257,6 @@ ul {
 }
 
 .s1-cta {
-  position: absolute;
-  top: calc(65vh + 60px + 150px + 100px);
-  left: var(--margin);
   display: block;
   width: min(465px, 30.7vw);
   height: min(40px, 2.65vw);
@@ -650,7 +647,7 @@ ul {
 
 /* Each card in its own row, stepping right */
 .s6-card {
-  padding: 30px var(--margin) 30px var(--margin);
+  padding: 15px var(--margin);
   display: grid;
   grid-template-columns: 380fr 220fr 50fr 220fr minmax(0, 400fr) minmax(0, 520fr);
   align-items: start;
@@ -718,7 +715,7 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   grid-column: 5;
 }
 
@@ -919,7 +916,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 12px;
   height: 100%;
   flex-shrink: 0;
 }
@@ -937,7 +934,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 12px;
   height: 100%;
   flex-shrink: 0;
 }
@@ -952,14 +949,14 @@ ul {
 .s7-gimg-pair {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 12px;
   height: 100%;
   flex-shrink: 0;
 }
 
 .s7-gimg-pair .s7-gimg {
   display: block;
-  height: calc(50% - 13px);
+  height: calc(50% - 6px);
   width: auto;
   flex-shrink: 0;
 }

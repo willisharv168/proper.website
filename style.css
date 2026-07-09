@@ -48,7 +48,7 @@
   --medium-brown: #8D8073;
   --dark-brown:   #555047;
   --yellow:       #E5C690;
-  --margin:       35px;
+  --margin:       1.16vw;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -86,22 +86,22 @@ ul {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   TYPE SYSTEM  (exact from copy.md)
+   TYPE SYSTEM
 ═══════════════════════════════════════════════════════════════ */
 
 .h1 {
   font-family: 'Satoshi', sans-serif;
   font-weight: 900;
-  font-size: clamp(22px, 16.9px + 1.34vw, 37px);
-  line-height: 0.92em;
+  font-size: clamp(18px, 2.45vw, 37px);
+  line-height: clamp(17px, 2.25vw, 34px);
   letter-spacing: 0;
 }
 
 .sub1 {
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  font-size: clamp(13.5px, 10.3px + 0.806vw, 22.5px);
-  line-height: 1.07em;
+  font-size: clamp(11px, 1.49vw, 22.5px);
+  line-height: clamp(12px, 1.59vw, 24px);
   letter-spacing: 0;
 }
 
@@ -109,16 +109,16 @@ ul {
   font-family: 'Erode', serif;
   font-weight: 600;
   font-style: italic;
-  font-size: clamp(12px, 9.1px + 0.72vw, 20px);
-  line-height: 1em;
+  font-size: clamp(10px, 1.32vw, 20px);
+  line-height: clamp(10px, 1.32vw, 20px);
   letter-spacing: 0;
 }
 
 .caps-sub {
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  font-size: clamp(13.5px, 10.3px + 0.806vw, 22.5px);
-  line-height: 1.07em;
+  font-size: clamp(11px, 1.49vw, 22.5px);
+  line-height: clamp(12px, 1.59vw, 24px);
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -126,8 +126,8 @@ ul {
 .subbody1 {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: clamp(10.5px, 8.0px + 0.63vw, 17.5px);
-  line-height: 0.94em;
+  font-size: clamp(9px, 1.16vw, 17.5px);
+  line-height: clamp(8px, 1.09vw, 16.5px);
   letter-spacing: -0.013em;
   text-transform: uppercase;
 }
@@ -135,16 +135,16 @@ ul {
 .subbody2 {
   font-family: 'Erode', serif;
   font-weight: 600;
-  font-size: clamp(10.5px, 8.0px + 0.63vw, 17.5px);
-  line-height: 1.26em;
+  font-size: clamp(9px, 1.16vw, 17.5px);
+  line-height: clamp(11px, 1.46vw, 22px);
   letter-spacing: 0.016em;
 }
 
 .body {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: clamp(8px, 6.1px + 0.485vw, 13.5px);
-  line-height: 1.67em;
+  font-size: clamp(7px, 0.89vw, 13.5px);
+  line-height: clamp(11px, 1.49vw, 22.5px);
   letter-spacing: 0.016em;
 }
 
@@ -164,7 +164,7 @@ ul {
 
 .reveal-up {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(0.79vw);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -228,7 +228,7 @@ ul {
 }
 
 .s1-logo {
-  height: min(150px, 9.9vw);
+  height: min(150px, 9.92vw);
   width: auto;
   color: var(--bone);
   display: block;
@@ -240,12 +240,12 @@ ul {
 
 .s1-tagline-group {
   position: absolute;
-  top: calc(65vh + 100px);
-  left: calc(var(--margin) + 12px);
+  top: calc(65vh + 3.31vw);
+  left: calc(var(--margin) + 0.40vw);
   right: var(--margin);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: min(24px, 1.59vw);
   opacity: 0;
   pointer-events: none;
   transition: opacity 2.6s ease 1.0s;
@@ -258,7 +258,7 @@ ul {
 
 .s1-cta {
   display: block;
-  width: min(465px, 30.7vw);
+  width: min(465px, 30.75vw);
   height: min(40px, 2.65vw);
   text-decoration: none;
   cursor: pointer;
@@ -280,8 +280,8 @@ ul {
 
 .s1-tagline {
   margin: 0;
-  font-size: clamp(24.3px, 18.5px + 1.46vw, 40.5px);
-  line-height: 0.93em;
+  font-size: clamp(20px, 2.68vw, 40.5px);
+  line-height: clamp(19px, 2.48vw, 37.5px);
   font-weight: 700;
 }
 
@@ -289,8 +289,8 @@ ul {
 /* fixed corner logo — appears when scroll animation completes */
 #logo-corner {
   position: fixed;
-  top: 35px;
-  left: 35px;
+  top: var(--margin);
+  left: var(--margin);
   z-index: 500;
   opacity: 0;
   pointer-events: none;
@@ -298,7 +298,7 @@ ul {
 }
 
 #logo-corner svg {
-  height: min(51px, 3.35vw);
+  height: min(51px, 3.37vw);
   width: auto;
   color: var(--bone);
   display: block;
@@ -331,7 +331,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 85px;
+  padding-bottom: 2.78vw;
   z-index: 1;
   pointer-events: none;
 }
@@ -349,8 +349,8 @@ ul {
 .s3-word {
   opacity: 0;
   color: var(--medium-brown);
-  font-size: clamp(24.3px, 18.5px + 1.46vw, 40.5px);
-  line-height: 0.93em;
+  font-size: clamp(20px, 2.68vw, 40.5px);
+  line-height: clamp(19px, 2.48vw, 37.5px);
   font-weight: 900;
 }
 
@@ -361,8 +361,8 @@ ul {
 
 .s3-about {
   text-align: left;
-  max-width: calc(53vw - var(--margin) - 60px);
-  font-size: clamp(13.4px, 10.1px + 0.8vw, 22px);
+  max-width: calc(53vw - var(--margin) - 1.98vw);
+  font-size: clamp(11px, 1.47vw, 22.3px);
 }
 
 .s3-about-word {
@@ -372,14 +372,14 @@ ul {
 
 .s3-tagline {
   position: absolute;
-  bottom: calc(var(--margin) + 48px);
+  bottom: calc(var(--margin) + 1.59vw);
   left: var(--margin);
   opacity: 0;
   pointer-events: none;
   text-transform: uppercase;
   transition: opacity 1s 0.4s ease;
-  font-size: clamp(25.2px, 19.1px + 1.51vw, 42px);
-  line-height: 0.93em;
+  font-size: clamp(21px, 2.78vw, 42px);
+  line-height: clamp(19.5px, 2.58vw, 39px);
 }
 
 .s3-tagline.is-visible {
@@ -403,7 +403,7 @@ ul {
 .s3-gallery-inner {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 1.06vw;
   will-change: transform;
 }
 
@@ -492,13 +492,13 @@ ul {
 
 @keyframes s5-float {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-18px); }
+  50%       { transform: translateY(-0.60vw); }
 }
 
-.s5-card:nth-child(1) .s5-card-inner { top: 50px;  animation-delay: 0s; }
-.s5-card:nth-child(2) .s5-card-inner { top: 200px; animation-delay: -2.2s; }
-.s5-card:nth-child(3) .s5-card-inner { top: 110px; animation-delay: -4s; }
-.s5-card:nth-child(4) .s5-card-inner { top: 270px; animation-delay: -1s; }
+.s5-card:nth-child(1) .s5-card-inner { top: 1.65vw;  animation-delay: 0s; }
+.s5-card:nth-child(2) .s5-card-inner { top: 6.61vw;  animation-delay: -2.2s; }
+.s5-card:nth-child(3) .s5-card-inner { top: 3.64vw;  animation-delay: -4s; }
+.s5-card:nth-child(4) .s5-card-inner { top: 8.93vw;  animation-delay: -1s; }
 
 .s5-card:hover .s5-card-inner {
   top: var(--margin);
@@ -519,23 +519,23 @@ ul {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 0.66vw;
 }
 
 .s5-img-crop {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 0.66vw;
 }
 
 .s5-img-crop .s5-card-img {
-  margin-bottom: -250px;
+  margin-bottom: -8.27vw;
 }
 
 .s5-card-header {
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 0.46vw;
+  margin-bottom: 0.46vw;
 }
 
 .s5-card-num,
@@ -576,7 +576,7 @@ ul {
   background: var(--dark-brown);
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 1.65vw;
   overflow: hidden;
   transform: translateX(110%);
   transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -617,18 +617,19 @@ ul {
 /* header bar above the grid */
 .s6-header {
   display: grid;
-  grid-template-columns: 380fr 220fr 50fr 220fr minmax(0, 400fr) minmax(0, 520fr);
-  column-gap: 48px;
+  grid-template-columns: 12.57vw 7.28vw 1.65vw 7.28vw minmax(0, 13.23vw) minmax(0, 17.20vw);
+  column-gap: 1.59vw;
   align-items: start;
-  padding: calc(var(--margin) + 24px) var(--margin) 20px var(--margin);
-  height: clamp(180px, 22vh, 220px);
+  padding: calc(var(--margin) + 0.79vw) var(--margin) 0.66vw var(--margin);
+  height: auto;
+  min-height: min(90px, 5.95vw);
 }
 
 .s6-heading {
   font-family: 'Satoshi', sans-serif;
   font-weight: 900;
-  font-size: clamp(25.2px, 19.1px + 1.51vw, 42px);
-  line-height: 0.93em;
+  font-size: clamp(21px, 2.78vw, 42px);
+  line-height: clamp(19.5px, 2.58vw, 39px);
   letter-spacing: 0;
   text-transform: uppercase;
   color: var(--bone);
@@ -642,16 +643,16 @@ ul {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, auto);
-  margin-top: min(100px, 6.6vw);
+  margin-top: 6.61vw;
 }
 
 /* Each card in its own row, stepping right */
 .s6-card {
-  padding: 15px var(--margin);
+  padding: 0.99vw var(--margin);
   display: grid;
-  grid-template-columns: 380fr 220fr 50fr 220fr minmax(0, 400fr) minmax(0, 520fr);
+  grid-template-columns: 12.57vw 7.28vw 1.65vw 7.28vw minmax(0, 13.23vw) minmax(0, 17.20vw);
   align-items: start;
-  column-gap: 48px;
+  column-gap: 1.59vw;
   position: relative;
   transition: background 0.35s ease, opacity 0.3s ease;
 }
@@ -679,21 +680,21 @@ ul {
 /* Card internals — horizontal layout: name | price | features | tagline */
 .s6-tier {
   color: var(--bone);
-  font-size: clamp(16.2px, 12.3px + 0.97vw, 27px);
-  line-height: 1.26em;
+  font-size: clamp(13.5px, 1.79vw, 27px);
+  line-height: clamp(17px, 2.25vw, 34px);
 }
 
 .s6-price {
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  font-size: clamp(16.2px, 12.3px + 0.97vw, 27px);
-  line-height: 1.04em;
+  font-size: clamp(13.5px, 1.79vw, 27px);
+  line-height: clamp(14px, 1.85vw, 28px);
   color: var(--bone);
   white-space: nowrap;
 }
 
 .s6-per {
-  font-size: clamp(8px, 7.3px + 0.18vw, 10px);
+  font-size: clamp(5px, 0.66vw, 10px);
   font-weight: 500;
   color: var(--bone);
   opacity: 0.4;
@@ -702,8 +703,8 @@ ul {
 .s6-commitment {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: clamp(10.5px, 8.0px + 0.63vw, 17.5px);
-  line-height: 33px;
+  font-size: clamp(9px, 1.16vw, 17.5px);
+  line-height: clamp(8px, 1.09vw, 16.5px);
   letter-spacing: -0.013em;
   text-transform: uppercase;
   color: var(--bone);
@@ -715,19 +716,19 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.33vw;
   grid-column: 5;
 }
 
 .s6-list li {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: clamp(8px, 6.1px + 0.485vw, 13.5px);
-  line-height: 32px;
+  font-size: clamp(7px, 0.89vw, 13.5px);
+  line-height: clamp(8px, 1.06vw, 16px);
   letter-spacing: 0.016em;
   color: var(--bone);
   opacity: 0.45;
-  padding-left: 14px;
+  padding-left: 0.46vw;
   position: relative;
 }
 
@@ -735,9 +736,9 @@ ul {
   content: '';
   position: absolute;
   left: 0;
-  top: 11px;
-  width: 4px;
-  height: 4px;
+  top: 0.36vw;
+  width: 0.13vw;
+  height: 0.13vw;
   border-radius: 50%;
   background: var(--bone);
   opacity: 0.6;
@@ -746,8 +747,8 @@ ul {
 .s6-tagline {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: clamp(10.5px, 8.0px + 0.63vw, 17.5px);
-  line-height: 33px;
+  font-size: clamp(9px, 1.16vw, 17.5px);
+  line-height: clamp(8px, 1.09vw, 16.5px);
   letter-spacing: -0.013em;
   text-transform: uppercase;
   color: var(--bone);
@@ -787,7 +788,7 @@ ul {
 .s7-cols {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 0.79vw;
   min-height: 0;
   padding: var(--margin);
   transition: grid-template-columns 2.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -812,7 +813,7 @@ ul {
 .s7-col-center {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0.79vw;
   overflow: hidden;
 }
 
@@ -860,8 +861,8 @@ ul {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  width: 56px;
-  height: 56px;
+  width: min(28px, 1.85vw);
+  height: min(28px, 1.85vw);
   padding: 0;
   z-index: 10;
 }
@@ -874,7 +875,7 @@ ul {
 .s7-col-right-inner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0.66vw;
 }
 
 .s7-btn {
@@ -908,7 +909,7 @@ ul {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  padding: var(--margin) var(--margin) var(--margin) 36px;
+  padding: var(--margin) var(--margin) var(--margin) 1.19vw;
   height: 100%;
 }
 
@@ -916,7 +917,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 0.79vw;
   height: 100%;
   flex-shrink: 0;
 }
@@ -934,7 +935,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 0.79vw;
   height: 100%;
   flex-shrink: 0;
 }
@@ -949,14 +950,14 @@ ul {
 .s7-gimg-pair {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.79vw;
   height: 100%;
   flex-shrink: 0;
 }
 
 .s7-gimg-pair .s7-gimg {
   display: block;
-  height: calc(50% - 6px);
+  height: calc(50% - 0.40vw);
   width: auto;
   flex-shrink: 0;
 }
@@ -966,8 +967,8 @@ ul {
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: calc((100vw - 2 * var(--margin) - 48px) / 3 - 2 * var(--margin));
+  gap: 0.66vw;
+  width: calc((100vw - 2 * var(--margin) - 1.59vw) / 3 - 2 * var(--margin));
   padding: 0 var(--margin);
 }
 
@@ -1032,20 +1033,20 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 36px;
+  gap: 1.19vw;
   z-index: 10;
 }
 
 .s8-thumb {
   overflow: hidden;
   cursor: pointer;
-  width: 52px;
-  height: 38px;
+  width: min(26px, 1.72vw);
+  height: min(19px, 1.26vw);
 }
 
 .s8-thumb.is-active {
-  width: 80px;
-  height: 58px;
+  width: min(40px, 2.65vw);
+  height: min(29px, 1.92vw);
 }
 
 .s8-thumb img {
@@ -1062,7 +1063,7 @@ ul {
   right: var(--margin);
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: 1.59vw;
   z-index: 10;
   pointer-events: none;
 }
@@ -1075,17 +1076,17 @@ ul {
 .s8-contact {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 30px;
-  margin-left: 100px;
+  gap: 0.26vw;
+  padding-top: 0.99vw;
+  margin-left: 3.31vw;
 }
 .s8-cta {
   display: block;
-  width: min(465px, 30.7vw);
+  width: min(465px, 30.75vw);
   height: min(40px, 2.65vw);
   text-decoration: none;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 0.99vw;
   flex-shrink: 0;
   margin-left: auto;
   pointer-events: auto;
@@ -1125,22 +1126,22 @@ ul {
 .modal {
   background: var(--bone);
   width: 45vw;
-  padding: 52px 56px;
+  padding: clamp(13px, 1.72vw, 26px) clamp(14px, 1.85vw, 28px);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: clamp(9px, 1.19vw, 18px);
 }
 
 .modal-close {
   position: absolute;
-  top: 24px;
-  right: 28px;
+  top: clamp(6px, 0.79vw, 12px);
+  right: clamp(7px, 0.93vw, 14px);
   background: none;
   border: none;
   cursor: pointer;
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(16.8px, 12.771px + 1.007vw, 28.0px);
+  font-size: clamp(12px, 0.93vw, 14px);
   font-weight: 400;
   color: var(--dark-brown);
   line-height: 1;
@@ -1154,17 +1155,17 @@ ul {
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(6px, 0.79vw, 12px);
 }
 
 .modal-field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: clamp(2px, 0.26vw, 4px);
 }
 
 .modal-label {
-  font-size: clamp(16px, 15.281px + 0.18vw, 18.0px);
+  font-size: clamp(7px, 0.60vw, 9px);
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1173,10 +1174,10 @@ ul {
 .modal-input {
   background: none;
   border: none;
-  border-bottom: 1.5px solid var(--dark-brown);
-  padding: 8px 0;
+  border-bottom: 1px solid var(--dark-brown);
+  padding: clamp(2px, 0.26vw, 4px) 0;
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(8px, 7.3px + 0.18vw, 10px);
+  font-size: clamp(8px, 0.66vw, 10px);
   font-weight: 400;
   color: var(--dark-brown);
   outline: none;
@@ -1189,12 +1190,12 @@ ul {
 
 .modal-submit {
   align-self: flex-start;
-  margin-top: 8px;
+  margin-top: clamp(2px, 0.26vw, 4px);
   background: none;
-  border: 1.5px solid var(--dark-brown);
-  padding: 14px 32px;
+  border: 1px solid var(--dark-brown);
+  padding: clamp(3.5px, 0.46vw, 7px) clamp(8px, 1.06vw, 16px);
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(8px, 7.3px + 0.18vw, 10px);
+  font-size: clamp(8px, 0.66vw, 10px);
   font-weight: 500;
   color: var(--dark-brown);
   cursor: pointer;

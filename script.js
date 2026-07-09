@@ -32,14 +32,14 @@
 
   /* SVG aspect ratio: viewBox 1120.11 × 280.55 */
   const LOGO_ASPECT   = 1120.11 / 280.55;
-  const LOGO_H        = logo.offsetHeight || 150;        // reads CSS min(150px, vw)
+  const LOGO_H        = logo.offsetHeight || window.innerWidth * 0.0992;
   const LOGO_W        = LOGO_H * LOGO_ASPECT;
 
-  const MARGIN        = 35;
   const cornerSvg     = logoCorner && logoCorner.querySelector('svg');
-  const END_LOGO_H    = (cornerSvg && cornerSvg.offsetHeight) || 51; // reads CSS min(51px, vw)
+  const END_LOGO_H    = (cornerSvg && cornerSvg.offsetHeight) || window.innerWidth * 0.0337;
   const END_SCALE     = END_LOGO_H / LOGO_H;
   const END_LOGO_W    = LOGO_W * END_SCALE;
+  const MARGIN        = window.innerWidth * 0.0116;
   const LOGO_SCROLL = 700;   // px over which logo animation runs
 
   function easeIn(t)  { return t * t * t; }
@@ -325,7 +325,7 @@
     .filter(Boolean);
 
   function update() {
-    const LOGO_Y = 35;
+    const LOGO_Y = window.innerWidth * 0.0116;
     const onBone = boneSections.some(el => {
       const r = el.getBoundingClientRect();
       return r.top <= LOGO_Y && r.bottom > LOGO_Y;
@@ -860,12 +860,13 @@
 ═══════════════════════════════════════════════════════════════ */
 
 (function () {
+  const btn    = document.querySelector('.s7-arrow');
   const canvas = document.querySelector('.s7-arrow-canvas');
   if (!canvas) return;
 
   function draw() {
     const dpr = window.devicePixelRatio || 1;
-    const S   = 56;
+    const S   = (btn && btn.offsetWidth) || Math.min(28, window.innerWidth * 0.0185);
     canvas.width        = S * dpr;
     canvas.height       = S * dpr;
     canvas.style.width  = S + 'px';
@@ -875,7 +876,7 @@
     ctx.fillStyle    = '#E5C690';
     ctx.textBaseline = 'middle';
     ctx.textAlign    = 'center';
-    ctx.font         = '700 56px "Satoshi", sans-serif';
+    ctx.font         = `700 ${S}px "Satoshi", sans-serif`;
     ctx.fillText('›', S / 2, S / 2);
   }
 
@@ -889,8 +890,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 465;
-    const H   = cta.offsetHeight || 40;
+    const W   = cta.offsetWidth  || Math.min(465, window.innerWidth * 0.3075);
+    const H   = cta.offsetHeight || Math.min(40,  window.innerWidth * 0.0265);
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -904,16 +905,18 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 20px "Satoshi", sans-serif';
+    const textSize = Math.round(H * 0.50);
+    const arrowSize = Math.round(H * 0.45);
+    ctx.font      = `700 ${textSize}px "Satoshi", sans-serif`;
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 9, H / 2);
+    ctx.fillText('BOOK A CALL', H * 0.225, H / 2);
 
-    ctx.font      = '400 18px "Satoshi", sans-serif';
+    ctx.font      = `400 ${arrowSize}px "Satoshi", sans-serif`;
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 16, H / 2);
+    ctx.fillText('›', W - H * 0.4, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
-    ctx.lineWidth   = 2;
+    ctx.lineWidth   = Math.max(1, H * 0.0375);
     ctx.strokeRect(0.75, 0.75, W - 1.5, H - 1.5);
   }
 
@@ -927,8 +930,8 @@
   if (!cta || !canvas) return;
 
   function draw() {
-    const W   = cta.offsetWidth  || 465;
-    const H   = cta.offsetHeight || 40;
+    const W   = cta.offsetWidth  || Math.min(465, window.innerWidth * 0.3075);
+    const H   = cta.offsetHeight || Math.min(40,  window.innerWidth * 0.0265);
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width        = W * dpr;
@@ -942,16 +945,18 @@
     ctx.fillStyle    = '#F7F0E7';
     ctx.textBaseline = 'middle';
 
-    ctx.font      = '700 20px "Satoshi", sans-serif';
+    const textSize = Math.round(H * 0.50);
+    const arrowSize = Math.round(H * 0.45);
+    ctx.font      = `700 ${textSize}px "Satoshi", sans-serif`;
     ctx.textAlign = 'left';
-    ctx.fillText('BOOK A CALL', 9, H / 2);
+    ctx.fillText('BOOK A CALL', H * 0.225, H / 2);
 
-    ctx.font      = '400 18px "Satoshi", sans-serif';
+    ctx.font      = `400 ${arrowSize}px "Satoshi", sans-serif`;
     ctx.textAlign = 'right';
-    ctx.fillText('›', W - 16, H / 2);
+    ctx.fillText('›', W - H * 0.4, H / 2);
 
     ctx.strokeStyle = '#F7F0E7';
-    ctx.lineWidth   = 2;
+    ctx.lineWidth   = Math.max(1, H * 0.0375);
     ctx.strokeRect(0.75, 0.75, W - 1.5, H - 1.5);
   }
 

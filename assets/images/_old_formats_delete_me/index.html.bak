@@ -14,10 +14,10 @@
   <section id="s1" class="s1">
     <div class="s1-sticky">
       <div class="s1-slides">
-        <img src="assets/images/image1.webp" class="s1-slide is-active" alt="">
-        <img src="assets/images/image2.webp" class="s1-slide" alt="">
-        <img src="assets/images/image3.webp" class="s1-slide" alt="">
-        <img src="assets/images/image4.webp" class="s1-slide" alt="">
+        <img src="assets/images/image1.png" class="s1-slide is-active" alt="">
+        <img src="assets/images/image2.png" class="s1-slide" alt="">
+        <img src="assets/images/image3.png" class="s1-slide" alt="">
+        <img src="assets/images/image4.png" class="s1-slide" alt="">
       </div>
       <div class="s1-overlay"></div>
       <div class="s1-logo-wrap">
@@ -88,17 +88,17 @@
     </div>
     </div>
     <!-- showcase images — fixed to viewport, controlled by JS transform/opacity -->
-    <img src="assets/images/image5.webp" class="s3-img-left" alt="">
+    <img src="assets/images/image5.png" class="s3-img-left" alt="">
     <img src="assets/images/image6.webp" class="s3-img-right" alt="">
     <!-- gallery — appears alongside about text, scrolls through images 1–5 -->
     <div class="s3-gallery">
       <div class="s3-gallery-inner">
-        <img src="assets/images/image1.webp" class="s3-gallery-img" alt="">
-        <img src="assets/images/image2.webp" class="s3-gallery-img" alt="">
-        <img src="assets/images/image3.webp" class="s3-gallery-img" alt="">
-        <img src="assets/images/imaged2.webp" class="s3-gallery-img" alt="">
-        <img src="assets/images/imaged3.webp" class="s3-gallery-img" alt="">
-        <img src="assets/images/imaged4.webp" class="s3-gallery-img" alt="">
+        <img src="assets/images/image1.png" class="s3-gallery-img" alt="">
+        <img src="assets/images/image2.png" class="s3-gallery-img" alt="">
+        <img src="assets/images/image3.png" class="s3-gallery-img" alt="">
+        <img src="assets/images/imaged2.png" class="s3-gallery-img" alt="">
+        <img src="assets/images/imaged3.png" class="s3-gallery-img" alt="">
+        <img src="assets/images/imaged4.png" class="s3-gallery-img" alt="">
       </div>
     </div>
   </section>
@@ -114,7 +114,7 @@
 
       <div class="s5-card">
         <div class="s5-card-inner">
-          <div class="s5-img-crop"><img src="assets/images/image11.webp" class="s5-card-img" alt=""></div>
+          <div class="s5-img-crop"><img src="assets/images/image11.jpg" class="s5-card-img" alt=""></div>
           <div class="s5-card-header">
             <p class="sub1 c-bone s5-card-num">01.</p>
             <p class="sub1 c-bone s5-card-name">Assessment</p>
@@ -125,7 +125,7 @@
 
       <div class="s5-card">
         <div class="s5-card-inner">
-          <div class="s5-img-crop"><img src="assets/images/image12.webp" class="s5-card-img" alt=""></div>
+          <div class="s5-img-crop"><img src="assets/images/image12.jpg" class="s5-card-img" alt=""></div>
           <div class="s5-card-header">
             <p class="sub1 c-bone s5-card-num">02.</p>
             <p class="sub1 c-bone s5-card-name">Strategise</p>
@@ -136,7 +136,7 @@
 
       <div class="s5-card">
         <div class="s5-card-inner">
-          <img src="assets/images/image13.webp" class="s5-card-img" alt="">
+          <img src="assets/images/image13.jpg" class="s5-card-img" alt="">
           <div class="s5-card-header">
             <p class="sub1 c-bone s5-card-num">03.</p>
             <p class="sub1 c-bone s5-card-name">Construct</p>
@@ -147,7 +147,7 @@
 
       <div class="s5-card">
         <div class="s5-card-inner">
-          <img src="assets/images/image14.webp" class="s5-card-img" alt="">
+          <img src="assets/images/image14.jpg" class="s5-card-img" alt="">
           <div class="s5-card-header">
             <p class="sub1 c-bone s5-card-num">04.</p>
             <p class="sub1 c-bone s5-card-name">Review</p>
@@ -166,7 +166,7 @@
   ═══════════════════════════════════════════════════════ -->
   <section id="s6" class="s6">
     <div class="s6-sticky">
-      <img src="assets/images/image18.webp" class="s6-img" alt="">
+      <img src="assets/images/image18.png" class="s6-img" alt="">
       <div class="s6-panel">
         <div class="s6-header">
           <p class="s6-heading">Flexible programs,<br>catered to your volume.</p>
@@ -256,25 +256,25 @@
         <div class="s7-gallery">
           <div class="s7-gallery-grid">
             <div class="s7-gimg-pair">
-              <img src="assets/images/imagec1.webp" class="s7-gimg" alt="">
-              <img src="assets/images/imagec2.webp" class="s7-gimg" alt="">
+              <img src="assets/images/imagec1.png" class="s7-gimg" alt="">
+              <img src="assets/images/imagec2.png" class="s7-gimg" alt="">
             </div>
-            <img src="assets/images/imageb4.webp" class="s7-gimg s7-gimg--tall" alt="">
+            <img src="assets/images/imageb4.jpeg" class="s7-gimg s7-gimg--tall" alt="">
             <div class="s7-gimg-pair">
-              <img src="assets/images/imageb3.webp" class="s7-gimg" alt="">
-              <img src="assets/images/imageb6.webp" class="s7-gimg" alt="">
+              <img src="assets/images/imageb3.png" class="s7-gimg" alt="">
+              <img src="assets/images/imageb6.png" class="s7-gimg" alt="">
             </div>
             <div class="s7-gimg-pair">
-              <img src="assets/images/imageb5.webp" class="s7-gimg" alt="">
+              <img src="assets/images/imageb5.png" class="s7-gimg" alt="">
               <img src="assets/images/image8.webp" class="s7-gimg" alt="">
             </div>
             <div class="s7-gimg-pair">
-              <img src="assets/images/imageb7.webp" class="s7-gimg" alt="">
-              <img src="assets/images/imageb9.webp" class="s7-gimg" alt="">
+              <img src="assets/images/imageb7.png" class="s7-gimg" alt="">
+              <img src="assets/images/imageb9.png" class="s7-gimg" alt="">
             </div>
             <div class="s7-gimg-h-pair s7-gimg-h-pair--large">
-              <img src="assets/images/imageb10.webp" class="s7-gimg" alt="">
-              <img src="assets/images/imageb11.webp" class="s7-gimg" alt="">
+              <img src="assets/images/imageb10.png" class="s7-gimg" alt="">
+              <img src="assets/images/imageb11.png" class="s7-gimg" alt="">
             </div>
           </div>
           <div class="s7-gallery-text">
@@ -294,15 +294,15 @@
   <section id="s8" class="s8">
     <div class="s8-inner">
       <div class="s8-slides">
-        <img src="assets/images/gallery.webp"       class="s8-slide is-active" alt="">
-        <img src="assets/images/galleryimage1.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage2.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage3.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage4.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage5.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage6.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage7.webp" class="s8-slide" alt="">
-        <img src="assets/images/galleryimage8.webp" class="s8-slide" alt="">
+        <img src="assets/images/gallery.png"       class="s8-slide is-active" alt="">
+        <img src="assets/images/galleryimage1.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage2.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage3.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage4.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage5.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage6.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage7.png" class="s8-slide" alt="">
+        <img src="assets/images/galleryimage8.png" class="s8-slide" alt="">
       </div>
       <!-- tracker: top of DOM = visual top = galleryimage8, bottom = gallery.png -->
       <div class="s8-footer-row">
@@ -316,15 +316,15 @@
         </a>
       </div>
       <div class="s8-tracker">
-        <div class="s8-thumb" data-index="8"><img src="assets/images/galleryimage8.webp" alt=""></div>
-        <div class="s8-thumb" data-index="7"><img src="assets/images/galleryimage7.webp" alt=""></div>
-        <div class="s8-thumb" data-index="6"><img src="assets/images/galleryimage6.webp" alt=""></div>
-        <div class="s8-thumb" data-index="5"><img src="assets/images/galleryimage5.webp" alt=""></div>
-        <div class="s8-thumb" data-index="4"><img src="assets/images/galleryimage4.webp" alt=""></div>
-        <div class="s8-thumb" data-index="3"><img src="assets/images/galleryimage3.webp" alt=""></div>
-        <div class="s8-thumb" data-index="2"><img src="assets/images/galleryimage2.webp" alt=""></div>
-        <div class="s8-thumb" data-index="1"><img src="assets/images/galleryimage1.webp" alt=""></div>
-        <div class="s8-thumb is-active" data-index="0"><img src="assets/images/gallery.webp" alt=""></div>
+        <div class="s8-thumb" data-index="8"><img src="assets/images/galleryimage8.png" alt=""></div>
+        <div class="s8-thumb" data-index="7"><img src="assets/images/galleryimage7.png" alt=""></div>
+        <div class="s8-thumb" data-index="6"><img src="assets/images/galleryimage6.png" alt=""></div>
+        <div class="s8-thumb" data-index="5"><img src="assets/images/galleryimage5.png" alt=""></div>
+        <div class="s8-thumb" data-index="4"><img src="assets/images/galleryimage4.png" alt=""></div>
+        <div class="s8-thumb" data-index="3"><img src="assets/images/galleryimage3.png" alt=""></div>
+        <div class="s8-thumb" data-index="2"><img src="assets/images/galleryimage2.png" alt=""></div>
+        <div class="s8-thumb" data-index="1"><img src="assets/images/galleryimage1.png" alt=""></div>
+        <div class="s8-thumb is-active" data-index="0"><img src="assets/images/gallery.png" alt=""></div>
       </div>
     </div>
   </section>

@@ -180,7 +180,7 @@ ul {
 
 .s1 {
   position: relative;
-  height: calc(100vh + 2000px);
+  height: calc(100vh + 1700px);
   width: 100%;
 }
 
@@ -318,7 +318,7 @@ ul {
 
 .s3 {
   position: relative;
-  height: calc(100vh + 4000px);
+  height: calc(100vh + 3400px);
   background: var(--bone);
 }
 
@@ -450,7 +450,7 @@ ul {
 
 .s5 {
   background: var(--medium-brown);
-  height: calc(100vh + 600px);
+  height: calc(100vh + 510px);
   position: relative;
   z-index: 600;
 }
@@ -557,7 +557,7 @@ ul {
 
 .s6 {
   background: var(--medium-brown);
-  height: calc(100vh + 1200px);
+  height: calc(100vh + 1020px);
 }
 
 .s6-sticky {
@@ -773,7 +773,7 @@ ul {
 
 .s7 {
   background: var(--bone);
-  height: calc(100vh + 1200px);
+  height: calc(100vh + 1020px);
 }
 
 .s7-sticky {
@@ -1124,32 +1124,53 @@ ul {
 }
 
 .modal {
-  background: var(--bone);
+  background: rgba(24, 21, 18, 0.38);
+  border: 1px solid rgba(247, 240, 231, 0.15);
+  border-radius: min(28px, 1.85vw);
+  backdrop-filter: blur(38px) saturate(180%);
+  -webkit-backdrop-filter: blur(38px) saturate(180%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 70px rgba(0, 0, 0, 0.4);
   width: 45vw;
-  padding: clamp(13px, 1.72vw, 26px) clamp(14px, 1.85vw, 28px);
+  padding: clamp(20px, 2.2vw, 34px);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: clamp(9px, 1.19vw, 18px);
+  gap: clamp(14px, 1.4vw, 22px);
 }
 
 .modal-close {
   position: absolute;
-  top: clamp(6px, 0.79vw, 12px);
-  right: clamp(7px, 0.93vw, 14px);
+  top: clamp(18px, 2vw, 30px);
+  right: clamp(18px, 2vw, 30px);
   background: none;
   border: none;
   cursor: pointer;
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(12px, 0.93vw, 14px);
-  font-weight: 400;
-  color: var(--dark-brown);
+  font-size: clamp(10px, 0.83vw, 13px);
+  font-weight: 500;
+  color: rgba(247, 240, 231, 0.55);
   line-height: 1;
   padding: 0;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--bone);
 }
 
 .modal-heading {
   margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 2.1vw, 32px);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.modal-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(247, 240, 231, 0.14);
 }
 
 .modal-form {
@@ -1169,41 +1190,42 @@ ul {
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  opacity: 0.55;
 }
 
 .modal-input {
   background: none;
   border: none;
-  border-bottom: 1px solid var(--dark-brown);
+  border-bottom: 1px solid rgba(247, 240, 231, 0.35);
   padding: clamp(2px, 0.26vw, 4px) 0;
   font-family: 'Satoshi', sans-serif;
   font-size: clamp(8px, 0.66vw, 10px);
   font-weight: 400;
-  color: var(--dark-brown);
+  color: var(--bone);
   outline: none;
   width: 100%;
 }
 
 .modal-input::placeholder {
-  color: var(--medium-brown);
+  color: rgba(247, 240, 231, 0.45);
 }
 
 .modal-submit {
-  align-self: flex-start;
-  margin-top: clamp(2px, 0.26vw, 4px);
+  align-self: flex-end;
+  margin-top: clamp(4px, 0.6vw, 10px);
   background: none;
-  border: 1px solid var(--dark-brown);
-  padding: clamp(3.5px, 0.46vw, 7px) clamp(8px, 1.06vw, 16px);
+  border: none;
+  padding: 0;
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(8px, 0.66vw, 10px);
-  font-weight: 500;
-  color: var(--dark-brown);
+  font-size: clamp(9px, 0.75vw, 12px);
+  font-weight: 700;
+  color: var(--bone);
   cursor: pointer;
   letter-spacing: 0.04em;
-  transition: background 0.2s ease, color 0.2s ease;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 .modal-submit:hover {
-  background: var(--dark-brown);
-  color: var(--bone);
+  opacity: 0.6;
 }

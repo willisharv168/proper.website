@@ -170,11 +170,11 @@
 
 
 /* ═══════════════════════════════════════════════════════════════
-   SECTION 3 — THREE-PHASE SCROLL ANIMATION  (total extra: 4000px)
+   SECTION 3 — THREE-PHASE SCROLL ANIMATION  (total extra: 3400px)
    Gallery: viewport-based slide — starts as s3 rises from below s1
-   Phase 1  (0–1500px):    title words reveal (starts immediately)
-   Phase 2  (1500–3000px): description reveals immediately after title
-   Phase 3  (3000–4000px): both visible; s5 rises to cover them
+   Phase 1  (0–1275px):    title words reveal (starts immediately)
+   Phase 2  (1275–2550px): description reveals immediately after title
+   Phase 3  (2550–3400px): both visible; s5 rises to cover them
 ═══════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -193,9 +193,9 @@
   const N = words.length;      // 11
   const M = bodyWords.length;  // 61
 
-  const TOTAL     = 4000;
-  const WORD_END  = 1500 / TOTAL;   // title fully revealed
-  const ABOUT_END = 3000 / TOTAL;   // description fully revealed
+  const TOTAL     = 3400;
+  const WORD_END  = 1275 / TOTAL;   // title fully revealed
+  const ABOUT_END = 2550 / TOTAL;   // description fully revealed
 
   function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
 
@@ -429,7 +429,7 @@
   function easeOut(t) { return 1 - Math.pow(1 - t, 4); }
   function easeIn(t)  { return t * t * t; }
 
-  const DWELL       = 600;  /* must match CSS calc(100vh + Xpx) */
+  const DWELL       = 510;  /* must match CSS calc(100vh + Xpx) */
   const ENTRY_LEAD  = 70;   /* px of lag at the start of entry  */
   const EXIT_RANGE  = 100;  /* px before detach where exit ease begins */
   const EXIT_LEAD   = 28;   /* px of upward pre-exit shift      */
@@ -572,7 +572,7 @@
 /* ═══════════════════════════════════════════════════════════════
    S6 → S7 SCROLL-DRIVEN TRANSITION
 
-   s6 is sticky for 1200px of scroll (height: 100vh + 1200px).
+   s6 is sticky for 1020px of scroll (height: 100vh + 1020px).
    The entire animation plays while s6 is pinned:
 
      p 0.0 – 0.5  s6 panel exits right, image exits left
@@ -598,7 +598,7 @@
   const s7Arrow   = document.querySelector('.s7-arrow');
   const s7Track   = document.querySelector('.s7-track');
 
-  const S6_ZONE = 1200; // must match s6 extra height
+  const S6_ZONE = 1020; // must match s6 extra height
 
   function eio(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
   function c01(v) { return Math.max(0, Math.min(1, v)); }
